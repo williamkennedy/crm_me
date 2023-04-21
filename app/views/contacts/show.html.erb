@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="mt-8 px-4 flex items-center justify-between">
+  <div class="min-w-0 flex-1">
+    <h1 class='h1'><%= @contact.name %></h1>
+  </div>
+  <div class='mt-4 flex ml-4 mt-0'>
+    <%= link_to edit_contact_path(@contact), class: 'btn btn-primary' do %>
+      <%= heroicon 'pencil', options: {class: 'w-5 h-5'} %>
+    <% end %>
+    <%= button_to @contact, method: :delete, class: 'ml-2 btn btn-danger' do %>
+      <%= heroicon 'trash', options: {class: 'w-5 h-5'} %>
+    <% end %>
+  </div>
+</div>
+
+
+<%= render @contact %>
+
+<%= link_to "View all conacts", contacts_path %>
