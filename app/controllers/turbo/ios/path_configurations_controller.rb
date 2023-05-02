@@ -3,7 +3,14 @@ module Turbo
     class PathConfigurationsController < ApplicationController
       def show
         render json: {
-
+          rules: [
+            {
+              patterns: ["/new$", "/edit$"],
+              properties: {
+                context: "modal"
+              }
+            }
+          ]
         }
       end
     end

@@ -5,8 +5,14 @@
     <h1 class='h1'>Contacts</h1>
   </div>
   <div class='mt-4 flex ml-4 mt-0'>
-    <%= link_to new_contact_path, class: 'btn btn-primary' do %>
+    <%= link_to '/hello_world', class: 'btn btn-primary' do %>
+      <%= heroicon 'phone', options: {class: 'w-5 h-5'} %>
+    <% end %>
+    <%= link_to new_contact_path, class: 'ml-2 btn btn-primary' do %>
       <%= heroicon 'plus', options: {class: 'w-5 h-5'} %>
+    <% end %>
+    <%= link_to import_contacts_path, class: 'ml-2 btn btn-primary' do %>
+      <%= heroicon 'arrow-down-on-square', options: {class: 'w-5 h-5'} %>
     <% end %>
   </div>
 </div>
